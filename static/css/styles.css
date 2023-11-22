@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 244, 98, 58;
+  --bs-primary-rgb: 236, 214, 192;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -60,7 +60,7 @@ font-family: 'Tenor Sans', sans-serif;;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: 'Forum', serif;
 font-family: 'Tenor Sans', sans-serif;;
-  --bs-body-font-size: 1rem;
+  --bs-body-font-size: 1.2rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #0e141c;
@@ -2849,7 +2849,7 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #f4623a;
+  --bs-btn-bg: #FFAB59;
   --bs-btn-border-color: #f4623a;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #cf5331;
@@ -8128,9 +8128,17 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
 }
 
+
 .bg-primary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+    padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(236, 214, 192, 0.9) 20%, rgba(236, 214, 192, 0.9) 40%), url("../images/51e0aa585b7b17b02b31290903543004.jpeg");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .bg-secondary {
@@ -10846,6 +10854,10 @@ body {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
+.text-dark-75{
+  color: rgba(53, 41, 29, 0.75) !important;
+
+}
 .btn-xl {
   padding: 1.25rem 2.25rem;
   font-size: 0.85rem;
@@ -10857,9 +10869,9 @@ body {
 
 hr.divider {
   height: 0.2rem;
-  max-width: 3.25rem;
+  max-width: 20rem;
   margin: 1.5rem auto;
-  background-color: #f4623a;
+  background-color: #FFD6B2;
   opacity: 1;
 }
 
