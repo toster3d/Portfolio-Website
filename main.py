@@ -129,3 +129,8 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
+
+
+# linki w nowej karcie
+# dodać zakładkę home do navbar
+# pomyśleć na js
