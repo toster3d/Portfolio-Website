@@ -44,6 +44,7 @@
   --bs-dark: #212529;
   --bs-primary-rgb: 236, 214, 192;
   --bs-secondary-rgb: 108, 117, 125;
+  --bs-portfolio-rgb: 51, 51, 51;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -8135,6 +8136,18 @@ textarea.form-control-lg {
     padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(236, 214, 192, 0.9) 20%, rgba(236, 214, 192, 0.9) 40%), url("../images/51e0aa585b7b17b02b31290903543004.jpeg");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-secondary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-portfolio-rgb), var(--bs-bg-opacity)) !important;
+    padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.99) 20%, rgba(51, 51, 51, 0.99) 40%), url("../images/51e0aa585b7b17b02b31290903543004.jpeg");
   background-position:center;
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -1,0 +1,71 @@
+<section class="page-section bg-primary" id="contact">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0">Let's Get In Touch!</h2>
+                <hr class="divider"/>
+                <p class="text-muted mb-5">I'm glad you took the time to visit my portfolio! If you have any questions,
+                    want to collaborate, or just chat about a project, feel free to get in touch. Here's how you can
+                    reach me:</p>
+            </div>
+        </div>
+
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-6">
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <form id="contactForm"
+                      name="sentMessage"
+                      method="post">
+                    <!-- Name input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."
+                               required/>
+                        <label for="name">Full name</label>
+                    </div>
+                    <!-- Email address input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com"
+                               required/>
+                        <label for="email">Email address</label>
+                    </div>
+                    <!-- Message input-->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" name="message"
+                                  placeholder="Enter your message here..."
+                                  style="height: 10rem" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+
+                    <!-- Submit Button-->
+
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            {% if msg_sent %}
+                            <div class="fw-bolder">{{ message }}</div>
+                            {% else: %}
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-5 text-center mb-6 mb-lg-1">
+                <a target="_blank" rel="noopener" href="https://github.com/toster3d"
+                   style="text-decoration-line:underline;pointer-events:all;"><i
+                        class="bi bi-github fs-1 mb-4 text-muted"></i></a>
+                <a target="_blank" rel="noopener"
+                   href="https://www.linkedin.com/in/jagoda-spycha%C5%82a-68176917a/?locale=en_US"
+                   style="text-decoration-line:underline;pointer-events:all;"><i
+                        class="bi bi-linkedin fs-1 mb-4 text-muted"></i></a>
+                <div>Or visit my social media.</div>
+            </div>
+        </div>
+    </div>
+</section>
