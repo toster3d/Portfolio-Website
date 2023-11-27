@@ -40,21 +40,18 @@
 
                     <!-- Submit Button-->
 
-                    <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center mb-3">
                             {% if msg_sent %}
-                            <div class="fw-bolder">{{ message }}</div>
-                            {% else: %}
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                            <div class="fw-bolder text-success">{{ message }}</div>
                             {% endif %}
                         </div>
-                    </div>
+
                     <div class="d-grid">
                         <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
-            </div>
+        </div>
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-5 text-center mb-6 mb-lg-1">
                 <a target="_blank" rel="noopener" href="https://github.com/toster3d"
