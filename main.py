@@ -1,5 +1,5 @@
 from flask_bootstrap import Bootstrap5
-from flask import Flask, render_template, redirect, url_for, flash, request, session
+from flask import Flask, render_template, redirect, url_for, request, session
 from flask_ckeditor import CKEditor
 import os
 import smtplib
@@ -10,12 +10,11 @@ app.config['SECRET_KEY'] = os.environ.get("FLASK_KEY")
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
-# MAIL_ADDRESS = "jagoda.spychala1@gmail.com"
-# MAIL_APP_PW = "hpll tsqh fwvp nojp"
-
-
 MAIL_ADDRESS = os.environ.get("MAIL_KEY")
 MAIL_APP_PW = os.environ.get("PASSWORD_KEY")
+
+
+# Send e-mail function
 def send_email(name, email, message):
     email_message = f"Subject:New Message\n\nName: {name}\nEmail: {email}\nMessage:{message}"
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
@@ -26,7 +25,6 @@ def send_email(name, email, message):
 
 @app.route('/', methods=["GET", "POST"])
 def home():
-
     if request.method == "POST":
         data = request.form
         send_email(data["name"], data["email"], data["message"])
@@ -40,5 +38,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=False, port=5001)
-
-# pomyśleć na js
