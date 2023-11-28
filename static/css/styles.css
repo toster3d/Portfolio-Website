@@ -10886,11 +10886,17 @@ hr.divider {
   margin: 1.5rem auto;
   background-color: #FFD6B2;
   opacity: 1;
+  width: 0;
+  animation: growLine 2s forwards;
 }
 
-hr.divider-light {
-  background-color: #fff;
+@keyframes growLine {
+  to {
+    width: 100%;
+  }
 }
+
+
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);

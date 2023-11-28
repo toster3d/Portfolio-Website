@@ -3,18 +3,19 @@ from flask import Flask, render_template, redirect, url_for, flash, request, ses
 from flask_ckeditor import CKEditor
 import os
 import smtplib
-from flask import jsonify
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "fkjdksksdkffkvck4k4l4l3dlldlwlldldflt55"
+app.config['SECRET_KEY'] = os.environ.get("FLASK_KEY")
 
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
-MAIL_ADDRESS = "jagoda.spychala1@gmail.com"
-MAIL_APP_PW = "hpll tsqh fwvp nojp"
+# MAIL_ADDRESS = "jagoda.spychala1@gmail.com"
+# MAIL_APP_PW = "hpll tsqh fwvp nojp"
 
 
+MAIL_ADDRESS = os.environ.get("MAIL_KEY")
+MAIL_APP_PW = os.environ.get("PASSWORD_KEY")
 def send_email(name, email, message):
     email_message = f"Subject:New Message\n\nName: {name}\nEmail: {email}\nMessage:{message}"
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
@@ -25,8 +26,6 @@ def send_email(name, email, message):
 
 @app.route('/', methods=["GET", "POST"])
 def home():
-    # MAIL_ADDRESS = os.environ.get("EMAIL_KEY")
-    # MAIL_APP_PW = os.environ.get("PASSWORD_KEY")
 
     if request.method == "POST":
         data = request.form
