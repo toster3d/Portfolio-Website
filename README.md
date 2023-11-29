@@ -27,7 +27,7 @@ Welcome to my programming portfolio website! This platform serves as a showcase 
 ## Deployment
 
 ## Preview
-![portfolio-1](static/images/Zrzut ekranu 2023-11-28 133342.png)
+![portfolio-1]([static/images/Zrzut ekranu 2023-11-28 133342.png](https://github.com/toster3d/Portfolio-Website/blob/main/static/images/Zrzut%20ekranu%202023-11-14%20134411.png))
 ![portfolio-2](static/images/Zrzut ekranu 2023-11-28 133410.png)
 ![portfolio-3](static/images/Zrzut ekranu 2023-11-28 133450.png)
 
